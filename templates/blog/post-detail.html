@@ -1,23 +1,20 @@
 {% extends "base.html" %}
+
+{% include "blog/post-comments.html" %}
 {% block content %}
-<!-- <h2>{{ post.title }}</h2>
-{% row %}
+<h2>{{ post.title }}</h2>
+<div class="row">
     <div class="col">
         {% include "blog/post-byline.html" %}
     </div>
-{% endrow %}
-{% row %}
+</div>
+<div class="row">
     <div class="col">
         {{ post.content|safe }}
     </div>
-{% endrow %} -->
+</div>
 
-
-{% row %}
-    {% col %}
-        {% recent_posts post %}
-    {% endcol %}
-{% endrow %}
 
 {% endblock %}
+
 
