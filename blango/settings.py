@@ -52,9 +52,11 @@ class Dev(Configuration):
       'django.contrib.messages',
       'django.contrib.staticfiles',
       'blog',
+      'debug_toolbar'
   ]
 
   MIDDLEWARE = [
+      'debug_toolbar.middleware.DebugToolbarMiddleware',
       'django.middleware.security.SecurityMiddleware',
       'django.contrib.sessions.middleware.SessionMiddleware',
       'django.middleware.common.CommonMiddleware',
@@ -83,7 +85,8 @@ class Dev(Configuration):
   ]
 
   WSGI_APPLICATION = 'blango.wsgi.application'
-
+  
+  INTERNAL_IPS = ["192.168.10.226"]
 
   # Database
   # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
